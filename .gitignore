@@ -1,0 +1,9 @@
+# Build output — recreated by `dotnet build` / `dotnet publish`
+bin/
+obj/
+publish/
+
+# Editor / IDE state
+.vs/
+.vscode/
+*.user

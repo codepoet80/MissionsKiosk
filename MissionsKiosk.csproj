@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- No console window when launched at login — Kestrel doesn't need one,
+         and a flashing black window behind the kiosk browser looks broken. -->
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Lets the published exe register and run as a genuine Windows Service:
+         starts at boot before anyone logs in, and Windows can restart it
+         automatically if it ever crashes. Run normally (double-click, dotnet
+         run) it behaves exactly like before — this only changes behavior
+         when the Service Control Manager is the one starting it. -->
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.1" />
+  </ItemGroup>
+
+</Project>

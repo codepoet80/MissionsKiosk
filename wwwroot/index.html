@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Missions Map</title>
+  <link rel="stylesheet" href="/lib/maplibre/maplibre-gl.css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="detail" class="detail hidden" aria-hidden="true">
+    <button id="detail-close" class="detail-close" aria-label="Close">&times;</button>
+    <div class="detail-inner">
+      <img id="detail-photo" class="detail-photo" alt="" />
+      <div class="detail-text">
+        <div id="detail-type" class="detail-type"></div>
+        <h1 id="detail-name"></h1>
+        <div id="detail-org" class="detail-org"></div>
+        <div id="detail-location" class="detail-location"></div>
+        <p id="detail-bio" class="detail-bio"></p>
+        <div id="detail-links" class="detail-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="picker" class="picker hidden" aria-hidden="true">
+    <div class="picker-inner">
+      <div class="picker-header">
+        <span>Several entries here — pick one</span>
+        <button id="picker-close" class="detail-close" aria-label="Close">&times;</button>
+      </div>
+      <div id="picker-list" class="picker-list"></div>
+    </div>
+  </div>
+
+  <div id="loading" class="loading">Loading map…</div>
+
+  <script src="/lib/maplibre/maplibre-gl.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
